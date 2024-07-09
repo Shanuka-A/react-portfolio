@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+header, footer {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
