@@ -1,15 +1,16 @@
 // src/utils.js
 import { saveAs } from 'file-saver';
 
-export const generateVCard = (name, phoneNumber) => {
+export const generateVCard = (name, phoneNumber, email) => {
   const vCardData = `
 BEGIN:VCARD
 VERSION:3.0
 FN:${name}
-TEL;TYPE=VOICE,HOME,MSG:${phoneNumber}
+TEL;TYPE=CELL:${phoneNumber}
+EMAIL:${email}
 END:VCARD
   `;
 
-  const blob = new Blob([vCardData], { type: 'text/vcard' });
+  const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8' });
   saveAs(blob, 'contact.vcf');
 };
