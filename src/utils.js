@@ -4,7 +4,7 @@ import { saveAs } from 'file-saver';
 export const generateVCard = (name, phoneNumber, email) => {
   const vCardData = `
 BEGIN:VCARD
-VERSION:3.0
+VERSION:5.0
 FN:${name}
 TEL;TYPE=CELL:${phoneNumber}
 EMAIL:${email}
