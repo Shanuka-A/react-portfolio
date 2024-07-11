@@ -1,13 +1,15 @@
 // src/utils.js
 import { saveAs } from 'file-saver';
 
-export const generateVCard = (name, phoneNumber, email) => {
+export const generateVCard = (name, phoneNumber, email, address) => {
   const vCardData = `
 BEGIN:VCARD
 VERSION:5.0
 FN:${name}
+N:${name};;;;
 TEL;TYPE=CELL:${phoneNumber}
-EMAIL:${email}
+EMAIL;TYPE=INTERNET:${email}
+ADR;TYPE=HOME:${address}
 END:VCARD
   `;
 
