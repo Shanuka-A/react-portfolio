@@ -1,10 +1,10 @@
-// src/Home.js
+// Home.js
 import React from 'react';
 import { generateVCard } from './utils';
 
 const Home = () => {
-  const name = 'Your Name';
-  const phoneNumber = '123-456-7890';
+  const name = 'Thanuja';
+  const phoneNumber = '123';
   const email = 'your.email@example.com';
   const address = '123 Main St, Anytown, USA';
 

@@ -1,17 +1,25 @@
-// src/utils.js
-import vCard from 'vcard-generator';
-import { saveAs } from 'file-saver';
+// utils.js
 
 export const generateVCard = (name, phoneNumber, email, address) => {
-  const card = vCard();
+  const vCardString = `BEGIN:VCARD
+VERSION:3.0
+FN:${name}
+TEL;TYPE=CELL:${phoneNumber}
+EMAIL:${email}
+ADR:${address}
+END:VCARD`;
 
-  card
-    .addName(name)
-    .addPhoneNumber(phoneNumber, 'HOME')
-    .addEmail(email)
-    .addAddress(address);
+  const blob = new Blob([vCardString], { type: 'text/vcard' });
+  const url = URL.createObjectURL(blob);
 
-  const vCardData = card.toString('3.0');
-  const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8' });
-  saveAs(blob, 'contact.vcf');
+  const a = document.createElement('a');
+  a.style.display = 'none';
+  a.href = url;
+  a.download = 'thanuja.vcf';
+  document.body.appendChild(a);
+  a.click();
+
+  // Clean up
+  URL.revokeObjectURL(url);
+  document.body.removeChild(a);
 };
