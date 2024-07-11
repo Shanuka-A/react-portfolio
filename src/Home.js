@@ -3,10 +3,10 @@ import React from 'react';
 import { generateVCard } from './utils';
 
 const Home = () => {
-  const name = '[Your Name]';
-  const phoneNumber = '[Your Phone Number]';
-  const email = '[Your Email]';
-  const address = '[Your Address]';
+  const name = 'Your Name';
+  const phoneNumber = '123-456-7890';
+  const email = 'your.email@example.com';
+  const address = '123 Main St, Anytown, USA';
 
   const handleSaveContact = () => {
     generateVCard(name, phoneNumber, email, address);
