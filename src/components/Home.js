@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { generateVCard } from '../utils';
 import { FaTwitter, FaLinkedin, FaGithub, FaFacebook, FaInstagram, FaMoon, FaSun, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { SiThreads } from 'react-icons/si';
-import picture from '../Assets/DSC_0064.jpg'; // Import the profile picture
+import picture from '../Assets/Profile.jpg'; // Import the profile picture
 
 const Home = () => {
   const [darkMode, setDarkMode] = useState(false);
-  const name = 'Thanuja';
-  const phoneNumber = '123';
+  const name = 'About you ';
+  const phoneNumber = '071 5632145';
   const email = 'your.email@example.com';
   const address = '123 Main St, Anytown, USA';
 
@@ -30,7 +30,7 @@ const Home = () => {
       </button>
       <div className={darkMode ? 'bg-gray-800 text-white p-6 rounded-lg shadow-lg w-full max-w-lg mx-4' : 'bg-white text-black p-6 rounded-lg shadow-lg w-full max-w-lg mx-4'}>
         <div className="text-center">
-          <h2 className="text-2xl font-bold mb-4">About Me</h2>
+          <h2 className="text-2xl font-bold mb-4"> Your Name</h2>
           <img
             src={picture}
             alt="Profile"
@@ -44,9 +44,7 @@ const Home = () => {
             <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900">
               <FaLinkedin size={30} />
             </a>
-            <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-gray-600">
-              <FaGithub size={30} />
-            </a>
+          
             <a href="https://facebook.com/your-profile" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
               <FaFacebook size={30} />
             </a>
@@ -57,7 +55,7 @@ const Home = () => {
               <SiThreads size={30} />
             </a>
           </div>
-          <p className="mb-6">Hi, I'm {name}, a [Your Profession].</p>
+          <p className="mb-6">{name}</p>
           <h3 className="text-xl font-semibold mb-2 text-blue-600">Contact Information</h3>
           <p className="flex items-center justify-center mb-2">
             <FaPhone className="mr-2" /> {phoneNumber}
