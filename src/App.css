@@ -97,24 +97,6 @@ nav a {
   position: relative;
 }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: currentColor;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-nav a:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
 .toggle-button {
   position: absolute;
   top: 1rem;
