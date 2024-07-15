@@ -1,4 +1,4 @@
-/* src/App.css */
+/* App.css */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -17,7 +17,7 @@ code {
 }
 
 .App-header {
-  background-color: #031e53;
+  background-color: #282c34;
   padding: 20px;
   color: white;
 }
@@ -30,13 +30,15 @@ nav {
 }
 
 nav a {
-  color: #ffffff;
+  color: #d8dcde;
   text-decoration: none;
   margin: 5px;
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav a.active {
+  color: #61dafb;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 main {
@@ -85,4 +87,61 @@ button {
   margin: 10px 2px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
 }

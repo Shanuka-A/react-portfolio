@@ -25,6 +25,7 @@ const Home = ({ darkMode }) => {
         <div className="text-center">
           <h2 className="text-2xl font-bold mb-4">Your Name</h2>
           <img src={picture} alt="Profile" className="w-36 h-36 rounded-full mx-auto mb-4" />
+          <p className="mb-6">{name}</p>
           <h3 className="text-xl font-semibold mb-2 mt-6 text-blue-600">Social Media</h3>
           <div className="flex justify-center space-x-4 mb-6">
             <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">
@@ -43,7 +44,7 @@ const Home = ({ darkMode }) => {
               <SiThreads size={30} />
             </a>
           </div>
-          <p className="mb-6">{name}</p>
+          
           <h3 className="text-xl font-semibold mb-2 text-blue-600">Contact Information</h3>
           <p className="flex items-center justify-center mb-2">
             <FaPhone className="mr-2" /> {phoneNumber}
